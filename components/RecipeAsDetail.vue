@@ -20,14 +20,14 @@
           </div>
           <div class="column">
             <div class="columns">
-              <div class="column has-text-centered">
+              <div v-if="recipe.preparationTime" class="column has-text-centered">
                 <div>
                   <img class="icons" src="~assets/icons/clock.svg" />
                 </div>
                 Preparation Time :
                 <strong>{{recipe.preparationTime }} min </strong>
               </div>
-              <div class="column has-text-centered">
+              <div v-if="recipe.totalTime" class="column has-text-centered">
                 <div>
                   <img class="icons" src="~assets/icons/clock.svg" />
                 </div>
@@ -37,14 +37,14 @@
             </div>
 
             <div class="columns">
-              <div class="column has-text-centered">
+              <div v-if="recipe.numberOfServices" class="column has-text-centered">
                 <div>
                   <img class="icons" src="~assets/icons/serves.svg" />
                 </div>
                 Serves :
                 <strong>{{recipe.numberOfServices}} persons </strong>
               </div>
-              <div class="column has-text-centered">
+              <div v-if="recipe.difficulty" class="column has-text-centered">
                 <div>
                   <img class="icons" src="~assets/icons/difficulty.svg" />
                 </div>
